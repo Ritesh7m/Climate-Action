@@ -30,7 +30,7 @@ window.addEventListener('load', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const API_KEY = '87ac44cbb86b481f941bf603da0a8f6a'; // NewsAPI key
+    const API_KEY = 'f9f2bb8865404bf4b7d7f29af4e8eb30'; // NewsAPI key
     const NEWS_URL = `https://newsapi.org/v2/everything?q=reforestation+climate+change&sortBy=publishedAt&apiKey=${API_KEY}`;
     const ELECTION_URL = `https://newsapi.org/v2/everything?q=climate+change&sortBy=publishedAt&apiKey=${API_KEY}`;
     const displayedArticles = new Set();
@@ -152,22 +152,13 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchNews();
     fetchElectionHeadlines();
 
-    // Refresh news every 24 hours
-    setInterval(fetchNews, 24 * 60 * 60 * 1000);
-});
-
-$(window).scroll(function() {
-    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
-        $('#return-to-top').fadeIn(200);    // Fade in the arrow
-    } else {
-        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
-    }
-});
-$('#return-to-top').click(function() {      // When arrow is clicked
-    $('body,html').animate({
-        scrollTop : 0                       // Scroll to top of body
-    }, 500);
-});
+    // Refresh news every 12 hours
+    setInterval(fetchNews, 12 * 60 * 60 * 1000);
+    // Refresh news every 2 minutes
+    // setInterval(fetchNews, 1 * 60 * 1000);
+    // Refresh news every 10 seconds
+    // setInterval(fetchNews, 10 * 1000);
+}); 
 
 
 //<!----------------------------------------------------------------------------------------------------------------------->
