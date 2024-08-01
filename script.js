@@ -58,11 +58,3 @@
         e.preventDefault();
         sendEmail();
     });
-
-
-
-
-
-    
-    
-
