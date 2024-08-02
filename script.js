@@ -1,3 +1,24 @@
+    //Pre-loader
+    $(window).on('load', function (event) {
+        // Hide preloader when everything is loaded
+        $('.js-preloader').delay(500).fadeOut(500);
+    });
+
+    //Force Pre-load
+    /* document.addEventListener('DOMContentLoaded', function() {
+        const loader = document.querySelector('.js-preloader');
+    
+        window.addEventListener('load', function() {
+            // Add class to start the transition
+            loader.classList.add('hidden');
+        
+            // Optional: Remove the loader from the DOM after the transition
+            // This ensures it doesn't interfere with the rest of the page
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 1000); // Match this timeout with the duration of the opacity transition
+        });
+    }); */
 
     AOS.init({
         delay: 0,
@@ -38,10 +59,15 @@
         sendEmail();
     });
 
-
-
-
-
-    
-    
-
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+            $('#return-to-top').fadeIn(200);    // Fade in the arrow
+        } else {
+            $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+        }
+    });
+    $('#return-to-top').click(function() {      // When arrow is clicked
+        $('body,html').animate({
+            scrollTop : 0                       // Scroll to top of body
+        }, 500);
+    });

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate News</title>
+    <link rel="icon" type="image/x-icon" href="./img/logotp.png">
+    <link rel="stylesheet" href="newsstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Pre-loader -->
+    <div class="loader js-preloader">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    
+     <!-- <div id="nav">
+      <img src="img/logo1.jpg" alt="Logo" />
+      <h1 class="logo">Climate</h1>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#article">Article</a>
+      <a href="#">News</a>
+      <a href="#contact">Contact Us</a>
+      <input type="text" placeholder="Search...">
+      <button class="login-button">Login</button>
+    </div> -->
+
+    <header>
+        <div class="header-container">
+            <a href="./index.html"><img src="img/logotp.png" alt="Logo"/></a>
+            <h1>Climate News</h1>
+            <a href="./index.html">Home</a>
+            <a href="./index.html#about">About</a>
+            <!-- <a href="#article">Article</a> -->
+            <!-- <a href="#">News</a> -->
+            <a href="./index.html#contact">Contact Us</a>
+
+            <div class="header-right">
+                <button class="donate-btn">Donate</button>
+                <!-- Updated mode button with icons -->
+                <button class="mode-btn" id="mode-btn">
+                    <i class="fas fa-sun" id="sun-icon"></i>
+                    <i class="fas fa-moon" id="moon-icon" style="display: none;"></i>
+                </button>
+            </div>
+        </div>
+        <button class="headline-imp"></button>
+    </header>
+
+    <main>
+        <section class="top-stories">
+            <h2>Top Stories</h2>
+            <div class="stories-grid" id="stories-grid">
+                <!-- News articles will be injected here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="footerp">&copy; Made by Lightning with ❤️ </div>
+        <!-- <button id="return-to-top">Return to Top</button> -->
+        <a id="return-to-top"><i class="icon-chevron-up"></i></a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="newscript.js"></script>
+</body>
+</html>
